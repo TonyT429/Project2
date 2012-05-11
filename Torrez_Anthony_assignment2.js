@@ -2,15 +2,13 @@
 // Student: Anthony Torrez
 // Date: May 10th , 2012
 
-// Global Variables
-
-var cash = 74
-	boxLancets = 10.99,
-	boxTestStrips = 25.99,
-	treats1 = "MilkBones",
-	treats2 = "15lb. Bag of Beneful",
-	treats3 = "Chicken Jerky",
-	toDo =["water the garden", "wash the dishes", "feed the dogs", "do homework"];  
+var cash = 74,
+      boxLancets = 10.99,
+      boxTestStrips = 25.99,
+      treats1 = "MilkBones",
+	  treats2 = "15lb. Bag of Beneful",
+	  treats3 = "Chicken Jerky",
+	  myTasks =["water the garden", "wash the dishes", "feed the dogs", "do homework"];  
 
 	  
 console.log("I crack my eyes open and the clock say 9 am.  And so the day begins.");
@@ -55,11 +53,11 @@ console.log(" ");
 
 //  Number
 
+
 function myWallet () {
-	  var change = (cash - boxTestStrips - boxLancets);
-	  var myChange = change.toFixed(2);
+	var change = (cash - boxTestStrips - boxLancets);
+	var myChange = change.toFixed(2);
     return ("$" + myChange);
-	  
 };
 myWallet();
 
@@ -76,8 +74,21 @@ function shop4Dogs () {
 console.log("Okay, now that I'm in the Pet Section, what do we have .... " );
 console.log(shop4Dogs());
 
-console.log("Okay, time to head home.  I still have stuff to do");
+console.log("Okay, time to head home.  I still have stuff to do - ");
+console.log(" ");
 
+// Array
+
+var toDoList = function (myArray) {
+	for (var i = 0; i < myTasks.length; i++) {
+		var thingsToDo = myTasks[i];
+                console.log("I still have to " + thingsToDo + ".");
+	};
+	return thingsToDo;
+};
+toDoList();
+
+console.log("Okay - I'm running out of time for this assignment so I'm going with what I got!");
 
 // alert("JavaScript works!");
 
